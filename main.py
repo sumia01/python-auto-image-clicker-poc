@@ -13,6 +13,7 @@ LOGFILE = f"{LOGPATH}/{time.time()}.log"
 SCREENSHOT = './data/screenshot.png'
 DEFAULT_REFERENCE = './data/reference.png'
 DIFF_METHOD = cv2.TM_SQDIFF_NORMED
+SUFFICIENT_CONFIDENCE = 0.1
 
 
 def setupLogger():
@@ -64,7 +65,7 @@ def findButtonCenter(reference):
     mn, _, mnLoc, _ = cv2.minMaxLoc(result)
 
     # exit if the confidence is too low
-    if mn > 0.1:
+    if mn > SUFFICIENT_CONFIDENCE:
         return (False, None)
 
     # Draw the rectangle:
