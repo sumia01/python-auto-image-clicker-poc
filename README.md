@@ -4,7 +4,7 @@ This code is an experiment to make a simple app that can find a reference image 
 
 # Installation
 
-- replace the reference png in the data folder or optionally you can pass the path to the reference image as a command line argument (`python refact.py data/ref2.png`)
+- replace the reference png in the data folder or optionally you can pass the path to the reference image as a command line argument (`python main.py data/ref2.png`)
 - install the dependencies: `pip install -r requirements.txt`
 - run the app: `python main.py` or `python main.py data/ref2.png`
 
